@@ -27,17 +27,17 @@ public class Educations {
     private String estado;
 
     @Column(name = "link")    
-    private String linkCert;
+    private String link;
     
     public Educations() {
     }
 
-    public Educations(String titulo, String descripcion, String fecha_final, String estado, String linkCert) {
+    public Educations(String titulo, String descripcion, String fecha_final, String estado, String link) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fecha_final = fecha_final;
         this.estado = estado;
-        this.linkCert = linkCert;
+        this.link = link;
     }
 
     public int getId() {
@@ -80,12 +80,12 @@ public class Educations {
         this.estado = estado;
     }
 
-    public String getLinkCert() {
-        return linkCert;
+    public String getLink() {
+        return link;
     }
 
-    public void setLinkCert(String linkCert) {
-        this.linkCert = linkCert;
+    public void setLink(String link) {
+        this.link = link;
     }
 
 

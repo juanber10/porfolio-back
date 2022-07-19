@@ -66,7 +66,7 @@ public class EducationControler {
             return new ResponseEntity(new Mensaje("La descripcion es obligatorio"), HttpStatus.BAD_REQUEST);
         
         Educations educations = new Educations(educationsDto.getTitulo(),educationsDto.getDescripcion(),
-                educationsDto.getFecha_final(),educationsDto.getEstado(), educationsDto.getLinkCert());
+                educationsDto.getFecha_final(),educationsDto.getEstado(), educationsDto.getLink());
         
         educationsService.save(educations);
         return new ResponseEntity(new Mensaje("Datos Academicos guardados"), HttpStatus.OK);
@@ -76,15 +76,11 @@ public class EducationControler {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id")int id, @RequestBody EducationsDto educationsDto){
         if(!educationsService.existsById(id))
-            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-
-        
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);        
         if(StringUtils.isBlank(educationsDto.getTitulo()))
-            return new ResponseEntity(new Mensaje("el titulo es obligatorio"), HttpStatus.BAD_REQUEST);
-        
+            return new ResponseEntity(new Mensaje("el titulo es obligatorio"), HttpStatus.BAD_REQUEST);        
         if(StringUtils.isBlank(educationsDto.getDescripcion()))
-            return new ResponseEntity(new Mensaje("La descricpion es obligatorio"), HttpStatus.BAD_REQUEST);
-        
+            return new ResponseEntity(new Mensaje("La descricpion es obligatorio"), HttpStatus.BAD_REQUEST);        
                 if(StringUtils.isBlank(educationsDto.getFecha_final()))
             return new ResponseEntity(new Mensaje("La fecha es obligatoria"), HttpStatus.BAD_REQUEST);
         
@@ -93,7 +89,7 @@ public class EducationControler {
         educations.setDescripcion(educationsDto.getDescripcion());
         educations.setFecha_final(educationsDto.getFecha_final());
         educations.setEstado(educationsDto.getEstado());
-        educations.setLinkCert(educationsDto.getLinkCert());
+        educations.setLink(educationsDto.getLink());
         educationsService.save(educations);
         return new ResponseEntity(new Mensaje("Datos actualizados"), HttpStatus.OK);
     }

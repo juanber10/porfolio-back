@@ -15,18 +15,18 @@ public class EducationsDto {
     @NotBlank
     private String estado;
     
-    private String linkCert;
+    private String link;
     
 
     public EducationsDto() {
     }
 
-    public EducationsDto(String titulo, String descripcion, String fecha_final, String estado, String linkCert) {
+    public EducationsDto(String titulo, String descripcion, String fecha_final, String estado, String link) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fecha_final = fecha_final;
         this.estado = estado;
-        this.linkCert = linkCert;
+        this.link = link;
     }
 
     public String getEstado() {
@@ -37,12 +37,12 @@ public class EducationsDto {
         this.estado = estado;
     }
 
-    public String getLinkCert() {
-        return linkCert;
+    public String getLink() {
+        return link;
     }
 
-    public void setLinkCert(String linkCert) {
-        this.linkCert = linkCert;
+    public void setLink(String link) {
+        this.link = link;
     }
 
 
