@@ -22,14 +22,30 @@ public class Educations {
     
     @Column(name = "fecha_final")    
     private String fecha_final;
+    
+    @Column(name = "estado")    
+    private String estado;
 
+    @Column(name = "link")    
+    private String linkCert;
+    
     public Educations() {
     }
 
-    public Educations(String titulo, String descripcion, String fecha_final) {
+    public Educations(String titulo, String descripcion, String fecha_final, String estado, String linkCert) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fecha_final = fecha_final;
+        this.estado = estado;
+        this.linkCert = linkCert;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitulo() {
@@ -56,14 +72,23 @@ public class Educations {
         this.fecha_final = fecha_final;
     }
 
-    public int getId() {
-        return id;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
-    
+
+    public String getLinkCert() {
+        return linkCert;
+    }
+
+    public void setLinkCert(String linkCert) {
+        this.linkCert = linkCert;
+    }
+
+
     
     
 }

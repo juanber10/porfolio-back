@@ -66,7 +66,7 @@ public class EducationControler {
             return new ResponseEntity(new Mensaje("La descripcion es obligatorio"), HttpStatus.BAD_REQUEST);
         
         Educations educations = new Educations(educationsDto.getTitulo(),educationsDto.getDescripcion(),
-                educationsDto.getFecha_final());
+                educationsDto.getFecha_final(),educationsDto.getEstado(), educationsDto.getLinkCert());
         
         educationsService.save(educations);
         return new ResponseEntity(new Mensaje("Datos Academicos guardados"), HttpStatus.OK);
@@ -92,6 +92,8 @@ public class EducationControler {
         educations.setTitulo(educationsDto.getTitulo());
         educations.setDescripcion(educationsDto.getDescripcion());
         educations.setFecha_final(educationsDto.getFecha_final());
+        educations.setEstado(educationsDto.getEstado());
+        educations.setLinkCert(educationsDto.getLinkCert());
         educationsService.save(educations);
         return new ResponseEntity(new Mensaje("Datos actualizados"), HttpStatus.OK);
     }
