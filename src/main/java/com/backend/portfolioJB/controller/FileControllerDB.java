@@ -111,7 +111,6 @@ public class FileControllerDB {
     public ResponseEntity<?> delete(@PathVariable("id")String id){
         if(!storageService.existsById(id))             
         return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-        System.out.println("Id recibido: "+ id);
         storageService.delete(id);
         return new ResponseEntity(new Mensaje("Eliminado"), HttpStatus.OK);
     }

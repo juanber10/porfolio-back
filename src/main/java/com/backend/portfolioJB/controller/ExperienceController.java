@@ -57,13 +57,13 @@ public class ExperienceController {
     public ResponseEntity<?> create(@RequestBody ExperienceDto experienceDto){
         
         if(StringUtils.isBlank(experienceDto.getTitulo()))            
-            return new ResponseEntity(new Mensaje("el Titulo es obligatorio"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El Titulo de exp es obligatorio"), HttpStatus.BAD_REQUEST);
         
         if(StringUtils.isBlank(experienceDto.getDescripcion()))            
-            return new ResponseEntity(new Mensaje("La descripcion es obligatoria"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("La descripcion de exp es obligatoria"), HttpStatus.BAD_REQUEST);
         
         if(StringUtils.isBlank(experienceDto.getFecha()))            
-            return new ResponseEntity(new Mensaje("La descripcion es obligatorio"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("La fecha es obligatorio"), HttpStatus.BAD_REQUEST);
         
         Experience experience = new Experience(
                 experienceDto.getTitulo(),
