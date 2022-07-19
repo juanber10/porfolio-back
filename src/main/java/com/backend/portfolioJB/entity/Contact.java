@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Contact {    
@@ -23,7 +24,8 @@ public class Contact {
     @Column(name = "Asunto")    
     private String asunto;  
     
-    @Column(name = "Mensaje")    
+    @Column(name = "Mensaje")
+    @Size(max=1000)    
     private String mensaje; 
     
     @Column(name = "Estado")    

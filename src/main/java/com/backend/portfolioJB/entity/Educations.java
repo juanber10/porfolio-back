@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Educations {
@@ -16,6 +17,7 @@ public class Educations {
     private String titulo;    
            
     @Column(name = "descripcion")
+    @Size(max=800)
     private String descripcion;    
     
     @Column(name = "fecha_final")    
