@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 @Entity
 public class Persona {
     
@@ -13,6 +14,7 @@ public class Persona {
     private int id;
     private String nombre;
     private String titulo;
+    @Size(max=800)
     private String descripcion;
     private String urlimg;
 
