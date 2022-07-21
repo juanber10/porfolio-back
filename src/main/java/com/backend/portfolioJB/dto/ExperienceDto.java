@@ -12,15 +12,28 @@ public class ExperienceDto {
     private String descripcion;
     @NotBlank
     private String fecha; 
+    
+    private String fecha_final; 
 
     public ExperienceDto() {
     }
 
-    public ExperienceDto(String titulo, String descripcion, String fecha) {
+    public ExperienceDto(String titulo, String descripcion, String fecha, String fecha_final) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fecha = fecha;
+        this.fecha_final = fecha_final;
     }
+
+    public String getFecha_final() {
+        return fecha_final;
+    }
+
+    public void setFecha_final(String fecha_final) {
+        this.fecha_final = fecha_final;
+    }
+
+    
 
     public String getTitulo() {
         return titulo;

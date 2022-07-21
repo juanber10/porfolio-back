@@ -68,7 +68,8 @@ public class ExperienceController {
         Experience experience = new Experience(
                 experienceDto.getTitulo(),
                 experienceDto.getDescripcion(),
-                experienceDto.getFecha());
+                experienceDto.getFecha(),
+                experienceDto.getFecha_final());
         
         experienceService.save(experience);
         return new ResponseEntity(new Mensaje("Experiencias guardadas"), HttpStatus.OK);
@@ -94,6 +95,7 @@ public class ExperienceController {
         experience.setTitulo(experienceDto.getTitulo());
         experience.setDescripcion(experienceDto.getDescripcion());
         experience.setFecha(experienceDto.getFecha());
+        experience.setFecha_final(experienceDto.getFecha_final());
         experienceService.save(experience);
         return new ResponseEntity(new Mensaje("Datos actualizados"), HttpStatus.OK);
     }
