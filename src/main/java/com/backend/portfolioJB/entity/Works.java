@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Works {
@@ -20,7 +21,8 @@ public class Works {
     @Column(name = "SubTitulo")    
     private String subtitulo;  
     
-    @Column(name = "Descripcion")    
+    @Column(name = "Descripcion")
+    @Size(max=1000)
     private String descripcion;  
     
     @Column(name = "Origenes")    
