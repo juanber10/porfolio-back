@@ -13,14 +13,16 @@ import org.hibernate.annotations.GenericGenerator;
 
 public class FileDB {  
   
-
+  @Id
   @GeneratedValue(generator = "uuid")
   @GenericGenerator(name = "uuid", strategy = "uuid2")
   private String id;  
-  @Id
+  
+  
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "idmain")
   private int IDmain;  
+  
   @Column(name = "Nombre") 
   private String name;
   @Column(name = "Tipo") 
@@ -36,7 +38,7 @@ public class FileDB {
     public FileDB() {
     }
 
-    public FileDB( String name, String type, String source, String url, byte[] data) {
+    public FileDB(String name, String type, String source, String url, byte[] data) {
         this.name = name;
         this.type = type;
         this.source = source;
@@ -99,11 +101,5 @@ public class FileDB {
     public void setData(byte[] data) {
         this.data = data;
     }
-
-   
- 
-
-   
-       
-    
+        
 }
