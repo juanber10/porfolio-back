@@ -7,19 +7,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "Archivos")
 
 public class FileDB {  
   
-  @Id
+
   @GeneratedValue(generator = "uuid")
   @GenericGenerator(name = "uuid", strategy = "uuid2")
   private String id;  
-  
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "idmain")
   private int IDmain;  
   @Column(name = "Nombre") 
