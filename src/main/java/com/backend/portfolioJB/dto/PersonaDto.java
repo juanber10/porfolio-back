@@ -5,8 +5,7 @@ import javax.validation.constraints.NotBlank;
 public class PersonaDto {
     
      @NotBlank
-    private String nombre;
-   
+    private String nombre;   
     @NotBlank
     private String titulo;
     @NotBlank

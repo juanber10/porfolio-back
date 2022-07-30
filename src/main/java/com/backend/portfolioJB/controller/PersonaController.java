@@ -91,8 +91,7 @@ public class PersonaController {
         persona.setSnaplink(personaDto.getSnaplink());
         persona.setGitlink(personaDto.getGitlink());
         persona.setCodeLink(personaDto.getCodeLink());
-        persona.setYtlink(personaDto.getYtlink());
-        
+        persona.setYtlink(personaDto.getYtlink());        
         
         personaService.save(persona);
         return new ResponseEntity(new Mensaje("Datos actualizados"), HttpStatus.OK);

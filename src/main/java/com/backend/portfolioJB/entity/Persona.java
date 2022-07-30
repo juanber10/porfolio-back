@@ -15,8 +15,7 @@ public class Persona {
     private String nombre;
     private String titulo;
     @Size(max=800)
-    private String descripcion;
-     
+    private String descripcion;     
     private String fblink;
     private String iglink;
     private String linkding;
@@ -96,9 +95,6 @@ public class Persona {
     public void setYtlink(String ytlink) {
         this.ytlink = ytlink;
     }
-
-
-
     public int getId() {
         return id;
     }
