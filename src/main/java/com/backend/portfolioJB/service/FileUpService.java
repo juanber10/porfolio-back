@@ -1,7 +1,6 @@
 
 package com.backend.portfolioJB.service;
 
-import com.backend.portfolioJB.entity.Educations;
 import com.backend.portfolioJB.entity.FileDB;
 import com.backend.portfolioJB.repository.FileDBRepository;
 import java.io.IOException;
