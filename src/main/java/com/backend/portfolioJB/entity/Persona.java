@@ -16,8 +16,7 @@ public class Persona {
     private String titulo;
     @Size(max=800)
     private String descripcion;
-    private String urlimg;
-    
+     
     private String fblink;
     private String iglink;
     private String linkding;
@@ -29,11 +28,10 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String nombre, String titulo, String descripcion, String urlimg, String fblink, String iglink, String linkding, String snaplink, String gitlink, String codeLink, String ytlink) {
+    public Persona(String nombre, String titulo, String descripcion, String fblink, String iglink, String linkding, String snaplink, String gitlink, String codeLink, String ytlink) {
         this.nombre = nombre;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.urlimg = urlimg;
         this.fblink = fblink;
         this.iglink = iglink;
         this.linkding = linkding;
@@ -133,15 +131,7 @@ public class Persona {
         this.descripcion = descripcion;
     }
 
-    public String getUrlimg() {
-        return urlimg;
-    }
-
-    public void setUrlimg(String urlimg) {
-        this.urlimg = urlimg;
-    }
-
-    
+   
 }
     
 

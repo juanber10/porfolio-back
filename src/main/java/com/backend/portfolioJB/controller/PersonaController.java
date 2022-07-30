@@ -54,7 +54,7 @@ public class PersonaController {
             return new ResponseEntity(new Mensaje("La descripcion es obligatorio"), HttpStatus.BAD_REQUEST);
          
         Persona persona = new Persona(personaDto.getNombre(),personaDto.getTitulo(),
-               personaDto.getDescripcion(), personaDto.getUrlimg(),personaDto.getFblink(),
+               personaDto.getDescripcion(),personaDto.getFblink(),
                personaDto.getIglink(),personaDto.getLinkding(),personaDto.getSnaplink(),
                 personaDto.getGitlink(),personaDto.getCodeLink(),personaDto.getYtlink());
         
@@ -85,7 +85,6 @@ public class PersonaController {
         persona.setNombre(personaDto.getNombre());
         persona.setTitulo(personaDto.getTitulo());
         persona.setDescripcion(personaDto.getDescripcion());
-        persona.setUrlimg(personaDto.getUrlimg());
         persona.setFblink(personaDto.getFblink());
         persona.setIglink(personaDto.getIglink());
         persona.setLinkding(personaDto.getLinkding());
