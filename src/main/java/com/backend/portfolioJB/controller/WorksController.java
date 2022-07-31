@@ -81,8 +81,7 @@ public class WorksController {
             return new ResponseEntity(new Mensaje("El subtitulo es obligatorio"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(worksDto.getDescripcion()))            
             return new ResponseEntity(new Mensaje("La descripcion es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(StringUtils.isBlank(worksDto.getOrigen()))            
-            return new ResponseEntity(new Mensaje("El origen de la publicacion es obligatorio"), HttpStatus.BAD_REQUEST);
+
               
               Works works = workServices.getOne(id).get();
               works.setTitulo(worksDto.getTitulo());
