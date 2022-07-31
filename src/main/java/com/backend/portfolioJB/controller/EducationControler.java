@@ -61,10 +61,7 @@ public class EducationControler {
         
         if(StringUtils.isBlank(educationsDto.getDescripcion()))            
             return new ResponseEntity(new Mensaje("La descripcion es obligatoria"), HttpStatus.BAD_REQUEST);
-        
-        if(StringUtils.isBlank(educationsDto.getFecha_final()))            
-            return new ResponseEntity(new Mensaje("La descripcion es obligatorio"), HttpStatus.BAD_REQUEST);
-        
+               
         Educations educations = new Educations(educationsDto.getTitulo(),educationsDto.getDescripcion(),
                 educationsDto.getFecha_final(),educationsDto.getEstado(), educationsDto.getLink());
         
